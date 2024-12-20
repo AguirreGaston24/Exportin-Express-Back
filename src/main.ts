@@ -9,7 +9,7 @@ async function bootstrap() {
 
   // Configuración de CORS para permitir credenciales
   app.enableCors({
-    origin: 'http://localhost:5173',  // Permite solo tu frontend
+    origin: process.env.DEPLOY,  // Permite solo tu frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Métodos permitidos
     allowedHeaders: ['Content-Type', 'Authorization'],  // Cabeceras permitidas
     credentials: true,  // Permite el uso de credenciales (cookies, autorización)
