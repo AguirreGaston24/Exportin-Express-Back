@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "assets": [
+      {
+        "include": "config/*.json",
+        "outDir": "dist/src"
+      }
+    ]
+  }
+}
