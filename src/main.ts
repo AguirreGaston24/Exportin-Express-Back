@@ -9,7 +9,7 @@ async function bootstrap() {
 
   // Configuración de CORS para permitir credenciales
   app.enableCors({
-    origin: process.env.DEPLOY,  // Permite solo tu frontend
+    origin: 'https://exportingexperts.pro',  // Permite solo tu frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Métodos permitidos
     allowedHeaders: ['Content-Type', 'Authorization'],  // Cabeceras permitidas
     credentials: true,  // Permite el uso de credenciales (cookies, autorización)
