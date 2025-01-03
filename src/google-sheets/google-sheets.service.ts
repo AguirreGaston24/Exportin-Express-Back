@@ -5,7 +5,7 @@ import { googleServiceAccount } from '../config/google-service-account'; // Ajus
 @Injectable()
 export class GoogleSheetsService {
   private sheets;
-  private spreadsheetId = '1cbJfchdgFfFdgs9GR6yPB0QxkziKVGOuVC5a0h_CaTU'; // ID de tu hoja de cálculo
+  private spreadsheetId = '1F-iMJagBqrO3qicstWk77A5CTRnzNKV-VfpdnXcx3Xg'; // ID de tu hoja de cálculo
 
   constructor() {
     const auth = new google.auth.JWT({
@@ -18,7 +18,7 @@ export class GoogleSheetsService {
 
   async appendRow(data: any[]) {
     try {
-      const range = 'Exporting-Express!A:E'; // Ajusta el rango según tu hoja
+      const range = 'ExportingExpress!A:E'; // Ajusta el rango según tu hoja
       const response = await this.sheets.spreadsheets.values.append({
         spreadsheetId: this.spreadsheetId,
         range,
